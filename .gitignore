@@ -1,0 +1,9 @@
+# Other client work in this folder — not part of this repo
+waterman-home.html
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
