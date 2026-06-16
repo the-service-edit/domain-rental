@@ -1,25 +1,24 @@
 # Domain Rental Management
 
-Marketing site for **Domain Rental Management** — a family-run boutique property management agency in Adelaide's southern suburbs (Hove).
+Marketing site for Domain Rental Management, a family-run boutique property management agency in Adelaide's southern suburbs (Hove).
 
 ## Contents
 
-- `domain-rental-management.html` — the homepage. A single, self-contained file (HTML + CSS + a little JS, fonts from Google Fonts). No build step.
+- `index.html` : the homepage. A single, self-contained file (HTML, CSS and a little JavaScript, with fonts from Google Fonts). No build step.
+- `cover-home.jpg` : the hero cover photograph (add this file; see below).
 
 ## Cover image
 
-The hero cover loads a local file named **`cover-home.jpg`** (see the `--hero-img` variable near the top of the stylesheet). Drop the home photograph into this folder with that exact name. Until it's present, the cover falls back to a brand-navy background.
+The hero loads a local file named `cover-home.jpg`, set by the `--hero-img` variable near the top of the stylesheet. Put the photo in the **same folder as `index.html`** with that exact name. Until it's present, the cover falls back to a brand-navy background.
 
-## Viewing it
+## Hosting (GitHub Pages)
 
-Open `domain-rental-management.html` in any browser.
+The repo serves `index.html` at its root. Enable Pages under Settings, then Pages, deploying from `main`.
 
-To host it free via GitHub Pages, rename the file to `index.html`, then enable Pages in the repo settings (Settings → Pages → deploy from `main`).
+## To complete
 
-## Notes
+- Add the RLA licence number in the footer.
+- Wire the enquiry form to a real inbox or CRM (it currently opens the visitor's email client).
+- Optional: host the logo and Valerie's photo locally rather than loading them from the existing live site.
 
-- Logo and Valerie's photo currently load from the existing live site; swap to local files for full portability.
-- Placeholders to complete: the **RLA licence number** (footer) and wiring the enquiry form to a real inbox/CRM (it currently opens the visitor's email client).
-
----
-© Domain Rental Management. Built by The Service Edit.
+(c) Domain Rental Management. Built by The Service Edit.

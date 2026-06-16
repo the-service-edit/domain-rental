@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Domain Rental Management — Boutique Property Management, Adelaide</title>
+<title>Domain Rental Management · Boutique Property Management, Adelaide</title>
 <meta name="description" content="A family-run boutique agency that manages residential rentals across Adelaide's southern suburbs. One focus, one point of contact, 35 years. You deal directly with Valerie Dellow.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,8 @@
 :root{
   --blue:#8eaadb;            /* original brand periwinkle */
   --blue-light:#b4c6e7;
+  --blue-wash:#e6edf7;       /* soft periwinkle wash from the brand blue */
+  --blue-wash-2:#dbe5f3;
   --navy:#243a5e;            /* deep version of the same blue */
   --navy-dk:#1a2c47;
   --ink:#1b2533;
@@ -58,7 +60,7 @@ header.scrolled .burger span{background:var(--ink)}
 
 /* ============ C1 · COVER (photography dominant) ============ */
 .cover{position:relative;min-height:100vh;display:flex;align-items:flex-end;background-color:var(--navy-dk);
-  background-image:linear-gradient(180deg,rgba(16,26,42,.42) 0%,rgba(16,26,42,.06) 26%,rgba(16,26,42,.10) 52%,rgba(16,26,42,.80) 100%),var(--hero-img,none);
+  background-image:linear-gradient(180deg,rgba(36,58,94,.46) 0%,rgba(36,58,94,.05) 24%,rgba(142,170,219,.12) 50%,rgba(26,44,71,.82) 100%),var(--hero-img,none);
   background-size:cover;background-position:center 44%}
 .cover-copy{padding:0 clamp(22px,5vw,72px) clamp(64px,8vh,104px);max-width:880px}
 .cover .kick{color:#fff;opacity:.92}
@@ -77,10 +79,10 @@ header.scrolled .burger span{background:var(--ink)}
 .creed .line em{color:var(--navy);font-style:italic}
 
 /* ============ C3 · THE PRINCIPAL (image dominant, overlapping, offset) ============ */
-.prin{position:relative;background:var(--paper-warm);padding:clamp(80px,12vh,150px) 0 clamp(80px,11vh,140px)}
+.prin{position:relative;background:var(--blue-wash);padding:clamp(80px,12vh,150px) 0 clamp(80px,11vh,140px)}
 .prin .shot{position:absolute;z-index:1;top:clamp(-70px,-7vh,-50px);right:0;width:min(48vw,640px);height:calc(100% + clamp(50px,7vh,70px));overflow:hidden}
 .prin .shot img{width:100%;height:100%;object-fit:cover;object-position:56% 22%}
-.prin .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(240,237,228,.55),transparent 22%)}
+.prin .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(230,237,247,.62),transparent 22%)}
 .prin .body{position:relative;z-index:2;padding:0 clamp(22px,5vw,72px);max-width:1280px;margin:0 auto}
 .prin h2{font-weight:300;font-size:clamp(32px,4.4vw,62px);line-height:1.04;max-width:13ch;margin-top:24px}
 .prin h2 em{color:var(--navy)}
@@ -91,8 +93,8 @@ header.scrolled .burger span{background:var(--ink)}
 .prin .tel{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.4vw,30px);color:var(--navy);border-bottom:1.5px solid var(--blue);padding-bottom:2px}
 
 /* ============ C4 · THE NUMBER (single oversized stat, big air) ============ */
-.years{padding:clamp(90px,16vh,210px) clamp(22px,5vw,72px);position:relative}
-.years .huge{font-family:var(--serif);font-weight:300;font-size:clamp(150px,30vw,420px);line-height:.8;color:var(--ink);letter-spacing:-.04em}
+.years{padding:clamp(90px,16vh,210px) clamp(22px,5vw,72px);position:relative;background:var(--blue-wash)}
+.years .huge{font-family:var(--serif);font-weight:300;font-size:clamp(150px,30vw,420px);line-height:.8;color:var(--navy);letter-spacing:-.04em}
 .years .huge em{font-style:normal;color:var(--blue)}
 .years .says{max-width:300px;margin-left:auto;margin-top:-2.5vw;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(20px,2.3vw,29px);color:var(--ink);line-height:1.34}
 .years .mini{display:flex;gap:60px;margin-top:70px;flex-wrap:wrap;padding-left:clamp(0px,18vw,260px)}
@@ -140,9 +142,9 @@ header.scrolled .burger span{background:var(--ink)}
 .voices .small-a .a span,.voices .small-b .a span{display:block;color:var(--muted);margin-top:4px}
 
 /* ============ C8 · WHERE WE WORK (map bleeds to edge) ============ */
-.area{position:relative;background:var(--paper-warm);min-height:600px;display:flex;align-items:center;padding:clamp(80px,11vh,140px) 0}
+.area{position:relative;background:var(--blue-wash);min-height:600px;display:flex;align-items:center;padding:clamp(80px,11vh,140px) 0}
 .area .map{position:absolute;top:0;bottom:0;left:0;width:min(50vw,680px);overflow:hidden;border-right:1px solid var(--line)}
-.area .map iframe{width:100%;height:100%;border:0;filter:grayscale(1) contrast(.9) opacity(.9)}
+.area .map iframe{width:100%;height:100%;border:0;filter:grayscale(1) sepia(1) hue-rotate(178deg) saturate(.5) brightness(1.03) contrast(.92) opacity(.92)}
 .area .txt{position:relative;z-index:2;margin-left:auto;width:min(50vw,620px);padding:0 clamp(22px,5vw,72px) 0 0}
 .area h2{font-weight:300;font-size:clamp(28px,3.6vw,50px);max-width:12ch;margin-top:18px;line-height:1.06}
 .area .note{max-width:42ch;margin-top:18px}
@@ -182,7 +184,7 @@ footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
 .reveal.in{opacity:1;transform:none}
 
-/* ============ RESPONSIVE — linearise the compositions ============ */
+/* ============ RESPONSIVE / linearise the compositions ============ */
 @media (max-width:900px){
   .menu,.nav-phone{display:none}.burger{display:block}
   .creed .line{padding-left:0}
@@ -239,8 +241,8 @@ footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
 
 <!-- C2 · Creed -->
 <section class="creed">
-  <span class="kick">What we do — and don't</span>
-  <p class="line reveal"><span class="dim">No sales. No commercial. No chasing listings.</span> We just <em>manage your rental</em> — and that is the entire job.</p>
+  <span class="kick">What we do (and don't)</span>
+  <p class="line reveal"><span class="dim">No sales. No commercial. No chasing listings.</span> We just <em>manage your rental</em>, and that is the entire job.</p>
 </section>
 
 <!-- C3 · The principal -->
@@ -249,7 +251,7 @@ footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
   <div class="body reveal">
     <span class="kick">The person on the other end</span>
     <h2>You won't be handed around. You speak to <em>Valerie</em>.</h2>
-    <p class="note">A family-owned Adelaide business, led by a husband-and-wife duo with 35 years behind them. A team of three — Tanya's been here over a decade. The people who know your property are the ones who answer the phone.</p>
+    <p class="note">A family-owned Adelaide business, led by a husband-and-wife duo with 35 years behind them. A team of three, and Tanya's been here over a decade. The people who know your property are the ones who answer the phone.</p>
     <div class="who">
       <div class="nm">Valerie Dellow<small>Principal &amp; Property Manager</small></div>
       <a class="tel" href="tel:0438188478">0438 188 478</a>
@@ -262,7 +264,7 @@ footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
   <div class="huge reveal">35<em>.</em></div>
   <p class="says reveal">years doing one thing, in one patch of Adelaide, for owners who mostly came by word of mouth.</p>
   <div class="mini reveal">
-    <div><b>10+ yrs</b><span>The same small team — zero turnover</span></div>
+    <div><b>10+ yrs</b><span>The same small team, zero turnover</span></div>
     <div><b>$0</b><span>To switch with a tenant already in place</span></div>
     <div><b>One</b><span>Point of contact, start to finish</span></div>
   </div>
@@ -272,9 +274,9 @@ footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
 <section class="handle" id="handle">
   <h2 class="head reveal">Everything a good manager should, quietly handled.</h2>
   <div class="col reveal">
-    <div class="item"><span class="mk">i.</span><div><h3>Leasing &amp; tenant selection</h3><p>Marketing, private viewings, and careful checks through TICA — talked through with you before anyone is approved. Lease and bond, end to end.</p></div></div>
+    <div class="item"><span class="mk">i.</span><div><h3>Leasing &amp; tenant selection</h3><p>Marketing, private viewings, and careful checks through TICA, talked through with you before anyone is approved. Lease and bond, end to end.</p></div></div>
     <div class="item"><span class="mk">ii.</span><div><h3>Rent &amp; the money side</h3><p>Prompt EFT rent, firm arrears control, monthly statements and a clean end-of-year summary.</p></div></div>
-    <div class="item"><span class="mk">iii.</span><div><h3>Inspections &amp; upkeep</h3><p>A photographed ingoing report, guaranteed quarterly inspections, repairs arranged promptly — always to your call.</p></div></div>
+    <div class="item"><span class="mk">iii.</span><div><h3>Inspections &amp; upkeep</h3><p>A photographed ingoing report, guaranteed quarterly inspections, repairs arranged promptly, always to your call.</p></div></div>
     <div class="item"><span class="mk">iv.</span><div><h3>Compliance &amp; cover</h3><p>Smoke alarms, landlord insurance, renewals and reviews, and tribunal matters handled when they arise.</p></div></div>
   </div>
 </section>
@@ -299,7 +301,7 @@ footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
       <h3>How it goes with us</h3>
       <ul>
         <li>You deal with the owner of the business</li>
-        <li>One focus — residential rentals, nothing else</li>
+        <li>One focus: residential rentals, nothing else</li>
         <li>A close team of three, together 10+ years</li>
         <li>Most of our work comes by referral</li>
         <li>Switch mid-lease; we manage the handover</li>
@@ -317,7 +319,7 @@ footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
 <!-- C7 · Voices -->
 <section class="voices" id="voices">
   <blockquote class="big reveal"><span class="mk">“</span>We've worked with Domain for over ten years. Thorough, excellent communicators, and zero trouble.<span class="mk">”</span></blockquote>
-  <div class="attr reveal">Jeff Strachan &nbsp;<span>— Landlord, 10+ years</span></div>
+  <div class="attr reveal">Jeff Strachan &nbsp;<span>· Landlord, 10+ years</span></div>
   <div class="small-a reveal">
     <p>“A safe, trustworthy pair of hands. Valerie and Tanya know their stuff and look after the place as if it were their own.”</p>
     <div class="a">Rowan &amp; Ruth<span>Landlords, Seaway Road</span></div>
@@ -330,11 +332,11 @@ footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
 
 <!-- C8 · Where we work -->
 <section class="area" id="area">
-  <div class="map"><iframe title="Service area — Hove, South Australia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hove%20South%20Australia&z=11&output=embed"></iframe></div>
+  <div class="map"><iframe title="Service area: Hove, South Australia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hove%20South%20Australia&z=11&output=embed"></iframe></div>
   <div class="txt reveal">
     <span class="kick">Where we work</span>
     <h2>Grange and North Adelaide, down to Seaford Rise.</h2>
-    <p class="note">We're based in Hove and keep our patch deliberately tight — so we're never far away, and inspections actually happen on time.</p>
+    <p class="note">We're based in Hove and keep our patch deliberately tight, so we're never far away, and inspections actually happen on time.</p>
     <div class="subs">
       <span>Hove</span><span>Brighton</span><span>Glenelg</span><span>Marion</span>
       <span>Hallett Cove</span><span>Aberfoyle Park</span><span>Morphett Vale</span>
@@ -349,7 +351,7 @@ footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
     <div class="reveal">
       <span class="kick">Request an appraisal</span>
       <h2>Let's talk about your property.</h2>
-      <p class="lead">Tell Valerie a little about it and she'll be in touch to arrange a consult and appraisal. No pressure, no obligation — and you'll always be talking to her, not a queue.</p>
+      <p class="lead">Tell Valerie a little about it and she'll be in touch to arrange a consult and appraisal. No pressure, no obligation, and you'll always be talking to her, not a queue.</p>
       <div class="lines">
         <a href="tel:0438188478">0438 188 478</a>
         <a href="mailto:valerie@domainrentalmanagement.com.au">valerie@domainrentalmanagement.com.au</a>
@@ -379,7 +381,7 @@ footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
       <div><h4>Get in touch</h4><ul><li><a href="tel:0438188478">0438 188 478</a></li><li><a href="mailto:valerie@domainrentalmanagement.com.au">Email Valerie</a></li><li><a href="#">Hove, South Australia</a></li><li><a href="https://www.facebook.com/domainrentalmanagement/" target="_blank" rel="noopener">Facebook</a></li></ul></div>
     </nav>
   </div>
-  <div class="legal"><span>© 2026 Domain Rental Management · RLA [your licence #]</span><span>Property management only — no sales, no distractions</span></div>
+  <div class="legal"><span>© 2026 Domain Rental Management · RLA [your licence #]</span><span>Property management only · no sales, no distractions</span></div>
 </footer>
 
 <script>
