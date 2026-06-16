@@ -3,409 +3,335 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Domain Rental Management · Boutique Property Management, Adelaide</title>
-<meta name="description" content="A family-run boutique agency that manages residential rentals across Adelaide's southern suburbs. One focus, one point of contact, 35 years. You deal directly with Valerie Dellow.">
+<title>Domain Rental Management, Boutique Property Management Adelaide</title>
+<meta name="description" content="Family-run boutique property management across Adelaide's southern suburbs. One focus, one point of contact, 35 years. Deal directly with Valerie Dellow.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --blue:#8eaadb;            /* original brand periwinkle */
-  --blue-light:#b4c6e7;
-  --blue-wash:#e6edf7;       /* soft periwinkle wash from the brand blue */
-  --blue-wash-2:#dbe5f3;
-  --navy:#243a5e;            /* deep version of the same blue */
-  --navy-dk:#1a2c47;
-  --ink:#1b2533;
-  --body:#4a525c;
-  --muted:#8b919a;
-  --paper:#f6f5f1;
-  --paper-warm:#f0ede4;
-  --line:#e3e0d6;
-  --serif:'Spectral',Georgia,'Times New Roman',serif;
-  --sans:'Hanken Grotesk',-apple-system,Segoe UI,Helvetica,Arial,sans-serif;
+  --navy:#243a5e;          /* brand deep blue (the slate role) */
+  --navy-dk:#1c2f4a;
+  --peri:#8eaadb;          /* brand periwinkle (the accent role) */
+  --peri-dk:#6f8fc4;
+  --ink:#54606b;           /* body text */
+  --head:#46555f;          /* headings, slate grey */
+  --bg2:#f3f5f7;
+  --bg3:#e9eef3;
+  --line:#e2e7ea;
+  --sans:'Open Sans',-apple-system,Segoe UI,Helvetica,Arial,sans-serif;
   --hero-img:url("cover-home.jpg");
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:88px}
-body{margin:0;background:var(--paper);color:var(--body);font-family:var(--sans);font-size:17.5px;line-height:1.72;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--blue);color:var(--navy-dk)}
-h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:400;margin:0;line-height:1.08;letter-spacing:-.01em}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0;color:var(--head);font-weight:300;letter-spacing:.02em}
 p{margin:0}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
-:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
-.kick{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--navy)}
-em{font-style:italic}
+.wrap{width:100%;max-width:1000px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:13px 26px;cursor:pointer;transition:.25s;border:0}
+.btn-accent{background:var(--peri);color:var(--navy-dk)}
+.btn-accent:hover{background:var(--peri-dk);color:#fff}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-dk)}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,.7);color:#fff}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+.more{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--head);border:1px solid var(--line);padding:8px 18px;transition:.25s}
+.more:hover{background:var(--peri);color:var(--navy-dk);border-color:var(--peri)}
 
-/* ============ HEADER (transparent over cover, solid on scroll) ============ */
-header.site{position:fixed;top:0;left:0;right:0;z-index:60;background:transparent;border-bottom:1px solid rgba(255,255,255,.16);transition:background .45s,border-color .45s,box-shadow .45s}
-.nav{display:flex;align-items:center;justify-content:space-between;height:88px;padding:0 clamp(22px,5vw,72px);gap:30px}
-.brand img{height:46px;width:auto;filter:brightness(0) invert(1);transition:filter .45s}
-.menu{display:flex;gap:34px;margin-left:auto;margin-right:30px}
-.menu a{font-family:var(--sans);font-weight:600;font-size:14px;color:#fff;position:relative;padding:6px 0;transition:color .45s}
-.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--blue);transition:right .32s}
-.menu a:hover::after{right:0}
-.nav-cta{display:flex;align-items:center;gap:22px}
-.nav-phone{font-family:var(--sans);font-weight:700;font-size:13.5px;color:#fff;transition:color .45s}
-.nav-phone:hover{color:var(--blue)}
-.nav-btn{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid rgba(255,255,255,.55);color:#fff;padding:13px 22px;transition:.3s}
-.nav-btn:hover{background:#fff;color:var(--navy);border-color:#fff}
+/* section heads */
+.sec{padding:58px 0}
+.sec-title{text-align:center;font-size:28px;font-weight:300;letter-spacing:.08em;text-transform:uppercase;color:var(--head)}
+.sec-sub{text-align:center;font-size:16px;font-weight:300;letter-spacing:.04em;text-transform:uppercase;color:#9aa6ae;margin-top:4px}
+.sec-lead{text-align:center;color:#9aa6ae;font-size:13px;max-width:640px;margin:14px auto 0}
+
+/* ===== top bar ===== */
+.topbar{background:var(--navy-dk);color:#aebccd;font-size:12px}
+.topbar .wrap{display:flex;justify-content:center;gap:34px;align-items:center;height:38px;flex-wrap:wrap}
+.topbar span{display:inline-flex;align-items:center;gap:8px}
+.topbar svg{width:13px;height:13px;color:var(--peri)}
+.topbar a{color:#c4d0de}.topbar a:hover{color:#fff}
+
+/* ===== header over hero ===== */
+.hero{position:relative;background:var(--navy-dk);background-image:linear-gradient(rgba(20,32,52,.62),rgba(20,32,52,.62)),var(--hero-img,none);background-size:cover;background-position:center 42%}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.brand{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.brand img{height:38px;width:auto;align-self:flex-start;filter:brightness(0) invert(1)}
+.brand small{font-size:9px;letter-spacing:.34em;text-transform:uppercase;color:var(--peri);margin-top:7px;padding-left:3px}
+.menu{display:flex;align-items:flex-start;gap:6px}
+.menu a{position:relative;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:10px 14px;transition:.2s}
+.menu a:hover{color:var(--peri)}
+.menu a.active{background:var(--peri);color:var(--navy-dk)}
+.menu a.active::after{content:"";position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid var(--peri)}
 .burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
-.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:.3s}
-header.scrolled{background:rgba(246,245,241,.95);backdrop-filter:blur(12px);border-bottom-color:var(--line);box-shadow:0 1px 0 rgba(27,37,51,.05)}
-header.scrolled .brand img{filter:brightness(0)}
-header.scrolled .menu a,header.scrolled .nav-phone{color:var(--ink)}
-header.scrolled .nav-btn{border-color:var(--navy);color:var(--navy)}
-header.scrolled .nav-btn:hover{background:var(--navy);color:#fff}
-header.scrolled .burger span{background:var(--ink)}
+.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0}
 
-/* ============ C1 · COVER (photography dominant) ============ */
-.cover{position:relative;min-height:100vh;display:flex;align-items:flex-end;background-color:var(--navy-dk);
-  background-image:linear-gradient(180deg,rgba(36,58,94,.46) 0%,rgba(36,58,94,.05) 24%,rgba(142,170,219,.12) 50%,rgba(26,44,71,.82) 100%),var(--hero-img,none);
-  background-size:cover;background-position:center 44%}
-.cover-copy{padding:0 clamp(22px,5vw,72px) clamp(64px,8vh,104px);max-width:880px}
-.cover .kick{color:#fff;opacity:.92}
-.cover h1{color:#fff;font-weight:300;font-size:clamp(42px,6.4vw,92px);line-height:.98;letter-spacing:-.022em;margin-top:22px;text-shadow:0 2px 40px rgba(8,14,24,.35)}
-.cover h1 em{color:var(--blue-light)}
-.cover-row{display:flex;align-items:center;gap:30px;flex-wrap:wrap;margin-top:34px}
-.cover-btn{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:#fff;color:var(--navy);padding:18px 32px;display:inline-flex;align-items:center;gap:10px;transition:.3s}
-.cover-btn:hover{transform:translateY(-2px);box-shadow:0 18px 40px -16px rgba(0,0,0,.5)}
-.cover-call{font-family:var(--sans);font-weight:700;font-size:14px;letter-spacing:.04em;color:#fff;border-bottom:1.5px solid var(--blue);padding-bottom:4px}
+/* hero inner */
+.hero-inner{text-align:center;padding:54px 0 0}
+.hero-inner h1{color:#fff;font-size:46px;font-weight:300;letter-spacing:.02em}
+.hero-inner p{color:rgba(255,255,255,.9);font-size:15px;letter-spacing:.14em;text-transform:uppercase;font-weight:300;margin:14px auto 0;max-width:680px}
+.hero-inner .btn{margin-top:26px}
+.boxes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:48px 0 -60px}
+.box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.28);padding:34px 20px 30px;text-align:center;transition:.25s}
+.box:hover{background:rgba(142,170,219,.16);border-color:var(--peri)}
+.box svg{width:46px;height:46px;color:#fff;margin:0 auto 16px}
+.box span{display:block;color:#fff;font-size:19px;font-weight:300;letter-spacing:.04em}
 
-/* ============ C2 · OPENING STATEMENT (typography + negative space) ============ */
-.creed{padding:clamp(96px,15vh,200px) clamp(22px,5vw,72px) clamp(80px,11vh,150px)}
-.creed .kick{margin-left:2px}
-.creed .line{font-family:var(--serif);font-weight:300;font-size:clamp(30px,4.8vw,70px);line-height:1.12;letter-spacing:-.018em;color:var(--ink);max-width:17ch;margin-top:34px;padding-left:clamp(0px,4vw,90px)}
-.creed .line .dim{color:#bcb8ac}
-.creed .line em{color:var(--navy);font-style:italic}
+/* ===== offers band ===== */
+.offers{background:var(--bg2);padding-top:96px;text-align:center}
+.offers .btn{margin-top:22px}
 
-/* ============ C3 · THE PRINCIPAL (image dominant, overlapping, offset) ============ */
-.prin{position:relative;background:var(--blue-wash);padding:clamp(80px,12vh,150px) 0 clamp(80px,11vh,140px)}
-.prin .shot{position:absolute;z-index:1;top:clamp(-70px,-7vh,-50px);right:0;width:min(48vw,640px);height:calc(100% + clamp(50px,7vh,70px));overflow:hidden}
-.prin .shot img{width:100%;height:100%;object-fit:cover;object-position:56% 22%}
-.prin .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(230,237,247,.62),transparent 22%)}
-.prin .body{position:relative;z-index:2;padding:0 clamp(22px,5vw,72px);max-width:1280px;margin:0 auto}
-.prin h2{font-weight:300;font-size:clamp(32px,4.4vw,62px);line-height:1.04;max-width:13ch;margin-top:24px}
-.prin h2 em{color:var(--navy)}
-.prin .note{max-width:430px;margin-top:26px;color:var(--body)}
-.prin .who{margin-top:40px;display:flex;align-items:flex-end;gap:26px;flex-wrap:wrap}
-.prin .nm{font-family:var(--serif);font-size:26px;color:var(--ink)}
-.prin .nm small{display:block;font-family:var(--sans);font-weight:700;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);margin-top:6px}
-.prin .tel{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.4vw,30px);color:var(--navy);border-bottom:1.5px solid var(--blue);padding-bottom:2px}
+/* ===== focus / features ===== */
+.focus{background:var(--bg3)}
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:40px}
+.feat .f{text-align:center}
+.feat .f h4{font-size:18px;font-weight:300;letter-spacing:.03em;color:var(--head)}
+.feat .ic{width:64px;height:64px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin:16px auto;box-shadow:0 4px 14px rgba(36,58,94,.06)}
+.feat .ic svg{width:28px;height:28px;color:var(--peri)}
+.feat .f p{font-size:12.5px;color:#8d98a1;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 4px;margin:14px 0 18px;min-height:108px}
 
-/* ============ C4 · THE NUMBER (single oversized stat, big air) ============ */
-.years{padding:clamp(90px,16vh,210px) clamp(22px,5vw,72px);position:relative;background:var(--blue-wash)}
-.years .huge{font-family:var(--serif);font-weight:300;font-size:clamp(150px,30vw,420px);line-height:.8;color:var(--navy);letter-spacing:-.04em}
-.years .huge em{font-style:normal;color:var(--blue)}
-.years .says{max-width:300px;margin-left:auto;margin-top:-2.5vw;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(20px,2.3vw,29px);color:var(--ink);line-height:1.34}
-.years .mini{display:flex;gap:60px;margin-top:70px;flex-wrap:wrap;padding-left:clamp(0px,18vw,260px)}
-.years .mini b{font-family:var(--serif);font-weight:500;font-size:30px;color:var(--navy);display:block}
-.years .mini span{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-top:6px;max-width:150px}
+/* ===== reviews cards ===== */
+.reviews{background:var(--bg2)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.rev{background:#fff;border:1px solid var(--line);padding:30px 28px;position:relative}
+.rev::before{content:"\201C";position:absolute;top:6px;left:18px;font-size:60px;color:var(--peri);opacity:.45;font-family:Georgia,serif}
+.rev p{font-size:14px;color:#5f6b74;position:relative;z-index:1}
+.rev .who{margin-top:18px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+.rev .who span{display:block;font-weight:400;letter-spacing:.04em;text-transform:none;color:#9aa6ae;margin-top:3px}
 
-/* ============ C5 · WHAT WE HANDLE (narrow editorial column, pushed right) ============ */
-.handle{padding:clamp(70px,10vh,130px) clamp(22px,5vw,72px) clamp(90px,12vh,150px)}
-.handle .head{font-weight:300;font-size:clamp(28px,3.4vw,46px);max-width:11ch;line-height:1.08}
-.handle .col{margin-left:auto;max-width:560px;margin-top:-12px}
-.handle .item{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:26px 0;border-bottom:1px solid var(--line)}
-.handle .item:first-of-type{border-top:1px solid var(--line)}
-.handle .item .mk{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--blue);line-height:1.4}
-.handle .item h3{font-family:var(--serif);font-weight:500;font-size:21px;color:var(--ink);margin-bottom:8px}
-.handle .item p{font-size:15.5px;line-height:1.6}
+/* ===== process 3-up ===== */
+.proc{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.proc .p{display:flex;gap:16px}
+.proc .pic{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.proc .pic svg{width:20px;height:20px;color:#fff}
+.proc h4{font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--head);text-transform:uppercase;margin-bottom:6px}
+.proc p{font-size:13px;color:#8d98a1}
+.proc .more{margin-top:12px}
 
-/* ============ C6 · WHY SWITCH (full-viewport navy; offer overhangs) ============ */
-.switch{background:var(--navy);color:#c7d0de;padding:clamp(90px,12vh,150px) clamp(22px,5vw,72px) 0;position:relative}
-.switch .kick{color:var(--blue)}
-.switch h2{color:#fff;font-weight:300;font-size:clamp(30px,4vw,58px);max-width:15ch;margin-top:20px;line-height:1.06}
-.switch .two{display:grid;grid-template-columns:0.85fr 1.15fr;gap:clamp(36px,6vw,90px);margin-top:60px;align-items:start}
-.switch .wrong{opacity:.62}
-.switch .wrong h3,.switch .right h3{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
-.switch .wrong ul,.switch .right ul{list-style:none;margin:0;padding:0}
-.switch .wrong li{padding:9px 0;font-size:15px;color:#9fa9b8;border-bottom:1px solid rgba(255,255,255,.08)}
-.switch .right li{padding:14px 0 14px 30px;position:relative;font-size:18px;color:#eef2f7;border-bottom:1px solid rgba(255,255,255,.1);font-family:var(--serif)}
-.switch .right li::before{content:"";position:absolute;left:2px;top:21px;width:7px;height:12px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(40deg)}
-.offer{position:relative;z-index:6;margin:84px auto -90px;max-width:1080px;background:var(--paper);color:var(--ink);padding:46px clamp(30px,4vw,60px);display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;box-shadow:0 40px 80px -40px rgba(10,18,30,.6)}
-.offer .big{font-family:var(--serif);font-weight:300;font-size:clamp(64px,8vw,104px);color:var(--navy);line-height:.85}
-.offer h3{font-family:var(--serif);font-weight:500;font-size:22px;margin-bottom:6px}
-.offer p{font-size:15px;color:var(--body);max-width:46ch}
-.offer a{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--navy);color:#fff;padding:16px 26px;white-space:nowrap;transition:.3s}
-.offer a:hover{background:var(--navy-dk)}
+/* ===== trust strip ===== */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
+.trust .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.trust .t{display:flex;align-items:center;gap:11px;color:#9aa6ae}
+.trust .t svg{width:26px;height:26px;color:#b9c2cb}
+.trust .t b{display:block;color:var(--head);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.trust .t span{font-size:11px;letter-spacing:.04em}
 
-/* ============ C7 · REVIEWS (asymmetric typography) ============ */
-.voices{padding:clamp(150px,20vh,240px) clamp(22px,5vw,72px) clamp(80px,10vh,130px)}
-.voices .big{font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(28px,4.4vw,62px);line-height:1.16;color:var(--ink);max-width:20ch;letter-spacing:-.012em}
-.voices .big .mk{color:var(--blue);font-style:normal}
-.voices .attr{margin-top:30px;font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy)}
-.voices .attr span{color:var(--muted)}
-.voices .small-a{max-width:380px;margin-top:90px;margin-left:8vw}
-.voices .small-b{max-width:360px;margin-top:46px;margin-left:auto;margin-right:6vw;text-align:right}
-.voices .small-a p,.voices .small-b p{font-family:var(--serif);font-size:18px;line-height:1.5;color:var(--ink)}
-.voices .small-a .a,.voices .small-b .a{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-top:16px}
-.voices .small-a .a span,.voices .small-b .a span{display:block;color:var(--muted);margin-top:4px}
+/* ===== dark CTA band ===== */
+.band{position:relative;background:var(--navy);background-image:linear-gradient(rgba(28,47,74,.86),rgba(28,47,74,.86)),var(--hero-img,none);background-size:cover;background-position:center 60%;text-align:center;padding:64px 0}
+.band h2{color:#fff;font-size:30px;font-weight:300;letter-spacing:.05em;text-transform:uppercase}
+.band p{color:rgba(255,255,255,.85);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin:12px auto 0;max-width:680px}
+.band .btn{margin-top:24px}
 
-/* ============ C8 · WHERE WE WORK (map bleeds to edge) ============ */
-.area{position:relative;background:var(--blue-wash);min-height:600px;display:flex;align-items:center;padding:clamp(80px,11vh,140px) 0}
-.area .map{position:absolute;top:0;bottom:0;left:0;width:min(50vw,680px);overflow:hidden;border-right:1px solid var(--line)}
-.area .map iframe{width:100%;height:100%;border:0;filter:grayscale(1) sepia(1) hue-rotate(178deg) saturate(.5) brightness(1.03) contrast(.92) opacity(.92)}
-.area .txt{position:relative;z-index:2;margin-left:auto;width:min(50vw,620px);padding:0 clamp(22px,5vw,72px) 0 0}
-.area h2{font-weight:300;font-size:clamp(28px,3.6vw,50px);max-width:12ch;margin-top:18px;line-height:1.06}
-.area .note{max-width:42ch;margin-top:18px}
-.area .subs{margin-top:30px;column-count:2;column-gap:30px}
-.area .subs span{display:block;font-family:var(--serif);font-size:18px;color:var(--ink);padding:6px 0;border-bottom:1px solid var(--line)}
+/* ===== footer ===== */
+footer{background:var(--navy-dk);color:#9fb0c2;text-align:center;padding:46px 0 40px}
+.social{display:flex;justify-content:center;gap:10px;margin-bottom:24px}
+.social a{width:34px;height:34px;border:1px solid rgba(255,255,255,.22);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#c4d0de;transition:.25s}
+.social a:hover{background:var(--peri);border-color:var(--peri);color:var(--navy-dk)}
+.social svg{width:15px;height:15px}
+footer .cmark{font-size:30px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:#fff}
+footer .copy{font-size:12px;letter-spacing:.06em;color:#8294a8;margin-top:8px}
+footer .copy b{color:var(--peri);font-weight:600}
+footer .em{margin-top:18px;font-size:13px;letter-spacing:.06em}
+footer .em a{color:#fff}footer .em a:hover{color:var(--peri)}
 
-/* ============ C9 · ASK (bespoke editorial form, offset) ============ */
-.ask{background:var(--navy);color:#cdd6e3;padding:clamp(100px,14vh,170px) clamp(22px,5vw,72px)}
-.ask .grid{display:grid;grid-template-columns:1fr 0.9fr;gap:clamp(40px,7vw,110px);align-items:start;max-width:1240px;margin:0 auto}
-.ask .kick{color:var(--blue)}
-.ask h2{color:#fff;font-weight:300;font-size:clamp(34px,4.8vw,68px);line-height:1.0;margin-top:18px}
-.ask .lead{color:#aebbcb;margin-top:24px;max-width:38ch}
-.ask .lines{margin-top:34px;display:flex;flex-direction:column;gap:14px}
-.ask .lines a{color:#fff;font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.2vw,27px);width:fit-content;border-bottom:1.5px solid var(--blue);padding-bottom:2px}
-.ask form{margin-top:8px}
-.ask .f{margin-bottom:22px}
-.ask label{display:block;font-family:var(--sans);font-weight:700;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#90a0b5;margin-bottom:8px}
-.ask input,.ask textarea{width:100%;background:transparent;border:0;border-bottom:1.5px solid rgba(255,255,255,.28);color:#fff;font-family:var(--serif);font-size:18px;padding:8px 0;transition:border-color .25s}
-.ask input::placeholder,.ask textarea::placeholder{color:#6f8198}
-.ask input:focus,.ask textarea:focus{outline:none;border-color:var(--blue)}
-.ask textarea{resize:vertical;min-height:60px}
-.ask button{margin-top:10px;font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:#fff;color:var(--navy);border:0;padding:18px 30px;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:.3s}
-.ask button:hover{background:var(--blue-light)}
-.ask .fine{font-size:12.5px;color:#8294aa;margin-top:14px}
-
-/* ============ FOOTER ============ */
-footer{background:var(--navy-dk);color:#9fadbf;padding:70px clamp(22px,5vw,72px) 34px}
-footer .top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1)}
-footer img{height:40px;filter:none;margin-bottom:14px}
-footer .tag{max-width:280px;line-height:1.6;color:#8a99ac}
-footer nav{display:flex;gap:60px;flex-wrap:wrap}
-footer h4{font-family:var(--sans);color:#fff;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 16px}
-footer ul{list-style:none;margin:0;padding:0}footer li{margin-bottom:10px}
-footer a:hover{color:var(--blue)}
-footer .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:24px;font-family:var(--sans);font-size:12px;color:#6d7c90}
-
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
-.reveal.in{opacity:1;transform:none}
-
-/* ============ RESPONSIVE / linearise the compositions ============ */
-@media (max-width:900px){
-  .menu,.nav-phone{display:none}.burger{display:block}
-  .creed .line{padding-left:0}
-  .prin{padding-top:64px}
-  .prin .shot{position:static;width:100%;height:74vw;max-height:520px}
-  .prin .shot::after{display:none}
-  .prin .body{margin-top:30px}
-  .years .says{margin-left:0;margin-top:18px}
-  .years .mini{padding-left:0;gap:40px}
-  .handle .col{margin-top:34px}
-  .handle .head{max-width:100%}
-  .switch .two{grid-template-columns:1fr;gap:40px}
-  .offer{grid-template-columns:1fr;text-align:left;gap:18px;margin-bottom:-70px;padding:34px 28px}
-  .offer .big{font-size:72px}
-  .voices{padding-top:120px}
-  .voices .small-a,.voices .small-b{margin:40px 0 0;text-align:left}
-  .area{display:block;padding:0}
-  .area .map{position:static;width:100%;height:62vw;border-right:0;border-bottom:1px solid var(--line)}
-  .area .txt{width:auto;padding:56px clamp(22px,5vw,72px)}
-  .area .subs{column-count:2}
-  .ask .grid{grid-template-columns:1fr;gap:46px}
+@media (max-width:860px){
+  .menu{display:none}.burger{display:block}
+  .boxes,.feat,.rev-grid,.proc{grid-template-columns:1fr;gap:18px}
+  .boxes{margin-bottom:-40px}
+  .hero-inner h1{font-size:34px}
+  .trust .wrap{justify-content:center;gap:26px}
+  .feat .f p{min-height:0}
 }
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 
-<!-- Header -->
-<header class="site" id="siteHeader">
+<!-- top bar -->
+<div class="topbar">
+  <div class="wrap">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Hove, Adelaide, South Australia</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:valerie@domainrentalmanagement.com.au">valerie@domainrentalmanagement.com.au</a></span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:0438188478">0438 188 478</a></span>
+  </div>
+</div>
+
+<!-- hero (header sits over the image) -->
+<section class="hero">
   <div class="nav">
-    <a href="#" class="brand" aria-label="Domain Rental Management home"><img src="https://domainrentalmanagement.com.au/wp-content/uploads/2021/02/white.png" alt="Domain Rental Management" width="168" height="46"></a>
-    <nav class="menu" aria-label="Primary">
-      <a href="#prin">Valerie</a><a href="#handle">What we do</a><a href="#switch">Why switch</a><a href="#voices">Reviews</a><a href="#area">Area</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="nav-phone" href="tel:0438188478">0438 188 478</a>
-      <a href="#ask" class="nav-btn">Request an appraisal</a>
+    <div class="wrap">
+      <a href="#" class="brand">
+        <img src="https://domainrentalmanagement.com.au/wp-content/uploads/2021/02/white.png" alt="Domain Rental Management">
+        <small>Boutique Property Management</small>
+      </a>
+      <nav class="menu">
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#switch">Why Switch</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contacts</a>
+      </nav>
       <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
-</header>
-
-<!-- C1 · Cover -->
-<section class="cover">
-  <div class="cover-copy">
-    <span class="kick">Boutique property management · Adelaide's southern suburbs</span>
-    <h1>The safe pair of hands for your <em>Adelaide</em> rental.</h1>
-    <div class="cover-row">
-      <a href="#ask" class="cover-btn">Request a rental appraisal &nbsp;→</a>
-      <a href="tel:0438188478" class="cover-call">or call Valerie · 0438 188 478</a>
-    </div>
-  </div>
-</section>
-
-<!-- C2 · Creed -->
-<section class="creed">
-  <span class="kick">What we do (and don't)</span>
-  <p class="line reveal"><span class="dim">No sales. No commercial. No chasing listings.</span> We just <em>manage your rental</em>, and that is the entire job.</p>
-</section>
-
-<!-- C3 · The principal -->
-<section class="prin" id="prin">
-  <div class="shot"><img src="https://domainrentalmanagement.com.au/wp-content/uploads/2021/03/home-about-valeria.jpg" alt="Valerie Dellow, Principal and Property Manager"></div>
-  <div class="body reveal">
-    <span class="kick">The person on the other end</span>
-    <h2>You won't be handed around. You speak to <em>Valerie</em>.</h2>
-    <p class="note">A family-owned Adelaide business, led by a husband-and-wife duo with 35 years behind them. A team of three, and Tanya's been here over a decade. The people who know your property are the ones who answer the phone.</p>
-    <div class="who">
-      <div class="nm">Valerie Dellow<small>Principal &amp; Property Manager</small></div>
-      <a class="tel" href="tel:0438188478">0438 188 478</a>
-    </div>
-  </div>
-</section>
-
-<!-- C4 · The number -->
-<section class="years">
-  <div class="huge reveal">35<em>.</em></div>
-  <p class="says reveal">years doing one thing, in one patch of Adelaide, for owners who mostly came by word of mouth.</p>
-  <div class="mini reveal">
-    <div><b>10+ yrs</b><span>The same small team, zero turnover</span></div>
-    <div><b>$0</b><span>To switch with a tenant already in place</span></div>
-    <div><b>One</b><span>Point of contact, start to finish</span></div>
-  </div>
-</section>
-
-<!-- C5 · What we handle -->
-<section class="handle" id="handle">
-  <h2 class="head reveal">Everything a good manager should, quietly handled.</h2>
-  <div class="col reveal">
-    <div class="item"><span class="mk">i.</span><div><h3>Leasing &amp; tenant selection</h3><p>Marketing, private viewings, and careful checks through TICA, talked through with you before anyone is approved. Lease and bond, end to end.</p></div></div>
-    <div class="item"><span class="mk">ii.</span><div><h3>Rent &amp; the money side</h3><p>Prompt EFT rent, firm arrears control, monthly statements and a clean end-of-year summary.</p></div></div>
-    <div class="item"><span class="mk">iii.</span><div><h3>Inspections &amp; upkeep</h3><p>A photographed ingoing report, guaranteed quarterly inspections, repairs arranged promptly, always to your call.</p></div></div>
-    <div class="item"><span class="mk">iv.</span><div><h3>Compliance &amp; cover</h3><p>Smoke alarms, landlord insurance, renewals and reviews, and tribunal matters handled when they arise.</p></div></div>
-  </div>
-</section>
-
-<!-- C6 · Why switch -->
-<section class="switch" id="switch">
-  <span class="kick">If you're already managed elsewhere</span>
-  <h2>The same handful of complaints, over and over.</h2>
-  <div class="two">
-    <div class="wrong">
-      <h3>What we hear goes wrong</h3>
-      <ul>
-        <li>Calls and emails that go unanswered</li>
-        <li>Maintenance left unraised</li>
-        <li>Arrears you're never told about</li>
-        <li>Inspections skipped or sporadic</li>
-        <li>A new manager every few months</li>
-        <li>No single person who owns it</li>
-      </ul>
-    </div>
-    <div class="right">
-      <h3>How it goes with us</h3>
-      <ul>
-        <li>You deal with the owner of the business</li>
-        <li>One focus: residential rentals, nothing else</li>
-        <li>A close team of three, together 10+ years</li>
-        <li>Most of our work comes by referral</li>
-        <li>Switch mid-lease; we manage the handover</li>
-        <li>We take over with your tenant in place</li>
-      </ul>
-    </div>
-  </div>
-  <div class="offer reveal">
-    <div class="big">$0</div>
-    <div><h3>It costs nothing to move to us</h3><p>We take over with your current tenant in occupation and handle the negotiation with your existing agent. No fee, no fuss.</p></div>
-    <a href="#ask">Talk to us</a>
-  </div>
-</section>
-
-<!-- C7 · Voices -->
-<section class="voices" id="voices">
-  <blockquote class="big reveal"><span class="mk">“</span>We've worked with Domain for over ten years. Thorough, excellent communicators, and zero trouble.<span class="mk">”</span></blockquote>
-  <div class="attr reveal">Jeff Strachan &nbsp;<span>· Landlord, 10+ years</span></div>
-  <div class="small-a reveal">
-    <p>“A safe, trustworthy pair of hands. Valerie and Tanya know their stuff and look after the place as if it were their own.”</p>
-    <div class="a">Rowan &amp; Ruth<span>Landlords, Seaway Road</span></div>
-  </div>
-  <div class="small-b reveal">
-    <p>“She gave her time generously on the viewing and answered everything on the spot. The presentation was exceptional.”</p>
-    <div class="a">Rox &amp; the boys<span>Tenants, Aberfoyle Park</span></div>
-  </div>
-</section>
-
-<!-- C8 · Where we work -->
-<section class="area" id="area">
-  <div class="map"><iframe title="Service area: Hove, South Australia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hove%20South%20Australia&z=11&output=embed"></iframe></div>
-  <div class="txt reveal">
-    <span class="kick">Where we work</span>
-    <h2>Grange and North Adelaide, down to Seaford Rise.</h2>
-    <p class="note">We're based in Hove and keep our patch deliberately tight, so we're never far away, and inspections actually happen on time.</p>
-    <div class="subs">
-      <span>Hove</span><span>Brighton</span><span>Glenelg</span><span>Marion</span>
-      <span>Hallett Cove</span><span>Aberfoyle Park</span><span>Morphett Vale</span>
-      <span>Seaford</span><span>Seaford Rise</span><span>North Adelaide</span>
-    </div>
-  </div>
-</section>
-
-<!-- C9 · Ask -->
-<section class="ask" id="ask">
-  <div class="grid">
-    <div class="reveal">
-      <span class="kick">Request an appraisal</span>
-      <h2>Let's talk about your property.</h2>
-      <p class="lead">Tell Valerie a little about it and she'll be in touch to arrange a consult and appraisal. No pressure, no obligation, and you'll always be talking to her, not a queue.</p>
-      <div class="lines">
-        <a href="tel:0438188478">0438 188 478</a>
-        <a href="mailto:valerie@domainrentalmanagement.com.au">valerie@domainrentalmanagement.com.au</a>
+  <div class="wrap hero-inner">
+    <h1>Welcome</h1>
+    <p>We manage your Adelaide rental, and nothing else. One focus, one point of contact, 35 years.</p>
+    <a href="#contact" class="btn btn-outline">Request an Appraisal</a>
+    <div class="boxes">
+      <div class="box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        <span>Tenant Selection</span>
+      </div>
+      <div class="box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        <span>Property Management</span>
+      </div>
+      <div class="box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <span>Inspections</span>
       </div>
     </div>
-    <form class="reveal" onsubmit="return sendEnquiry(event)">
-      <div class="f"><label for="n">Your name</label><input id="n" type="text" required></div>
-      <div class="f"><label for="e">Email</label><input id="e" type="email" required></div>
-      <div class="f"><label for="p">Phone</label><input id="p" type="tel"></div>
-      <div class="f"><label for="a">Property address</label><input id="a" type="text" placeholder="Street, suburb"></div>
-      <div class="f"><label for="m">Anything we should know?</label><textarea id="m" placeholder="Currently tenanted, managed elsewhere, timing…"></textarea></div>
-      <button type="submit">Send to Valerie &nbsp;→</button>
-      <p class="fine">Prefer to talk? Call 0438 188 478.</p>
-    </form>
   </div>
 </section>
 
-<!-- Footer -->
-<footer>
-  <div class="top">
-    <div>
-      <img src="https://domainrentalmanagement.com.au/wp-content/uploads/2021/02/white.png" alt="Domain Rental Management" width="148" height="40">
-      <p class="tag">Boutique property management for Adelaide's southern suburbs. One focus, and the same people every time you call.</p>
-    </div>
-    <nav>
-      <div><h4>Pages</h4><ul><li><a href="#prin">Valerie</a></li><li><a href="#handle">What we do</a></li><li><a href="#switch">Why switch</a></li><li><a href="#voices">Reviews</a></li><li><a href="#area">Service area</a></li></ul></div>
-      <div><h4>Get in touch</h4><ul><li><a href="tel:0438188478">0438 188 478</a></li><li><a href="mailto:valerie@domainrentalmanagement.com.au">Email Valerie</a></li><li><a href="#">Hove, South Australia</a></li><li><a href="https://www.facebook.com/domainrentalmanagement/" target="_blank" rel="noopener">Facebook</a></li></ul></div>
-    </nav>
+<!-- offers band -->
+<section class="offers sec" id="about">
+  <div class="wrap">
+    <h2 class="sec-title">Domain Offers You</h2>
+    <div class="sec-sub">A property manager who actually answers the phone</div>
+    <p class="sec-lead">A family-run Adelaide agency with one focus. No sales, no commercial, no distractions. As a landlord, you deal directly with the principal, Valerie Dellow.</p>
+    <a href="#services" class="btn btn-accent">See What We Manage</a>
   </div>
-  <div class="legal"><span>© 2026 Domain Rental Management · RLA [your licence #]</span><span>Property management only · no sales, no distractions</span></div>
+</section>
+
+<!-- focus / features -->
+<section class="focus sec" id="services">
+  <div class="wrap">
+    <h2 class="sec-title">Our Focus Is Your Investment</h2>
+    <div class="feat">
+      <div class="f">
+        <h4>Leasing</h4>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <p>Marketing, private viewings and careful TICA checks, talked through with you before anyone is approved. Lease and bond handled end to end.</p>
+        <a href="#contact" class="more">More</a>
+      </div>
+      <div class="f">
+        <h4>Rent &amp; Financials</h4>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <p>Prompt EFT rent, firm arrears control, monthly statements and a clean end-of-year summary for your records.</p>
+        <a href="#contact" class="more">More</a>
+      </div>
+      <div class="f">
+        <h4>Inspections</h4>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <p>A photographed ingoing report, guaranteed quarterly inspections, and repairs arranged promptly, always to your call.</p>
+        <a href="#contact" class="more">More</a>
+      </div>
+      <div class="f">
+        <h4>Compliance</h4>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <p>Smoke alarms, landlord insurance, renewals and rent reviews, and tribunal matters handled when they arise.</p>
+        <a href="#contact" class="more">More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- reviews -->
+<section class="reviews sec" id="reviews">
+  <div class="wrap">
+    <h2 class="sec-title">What Our Clients Say</h2>
+    <div class="rev-grid">
+      <div class="rev">
+        <p>We've worked with Domain for over ten years. Thorough, excellent communicators, and zero trouble. I highly recommend them.</p>
+        <div class="who">Jeff Strachan<span>Landlord, 10+ year client</span></div>
+      </div>
+      <div class="rev">
+        <p>A safe and trustworthy pair of hands. Valerie and Tanya know their stuff and look after the property as if it were their own.</p>
+        <div class="who">Rowan &amp; Ruth<span>Landlords, Seaway Road</span></div>
+      </div>
+      <div class="rev">
+        <p>She gave her time generously on the viewing and answered everything on the spot. The presentation was exceptional.</p>
+        <div class="who">Rox &amp; the boys<span>Tenants, Aberfoyle Park</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- process 3-up -->
+<section class="sec" id="switch">
+  <div class="wrap">
+    <h2 class="sec-title" style="margin-bottom:38px">How Switching Works</h2>
+    <div class="proc">
+      <div class="p">
+        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <div>
+          <h4>Free Appraisal</h4>
+          <p>We assess your property and the local market, then give you an honest rental estimate and a tailored plan.</p>
+          <a href="#contact" class="more">More</a>
+        </div>
+      </div>
+      <div class="p">
+        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+        <div>
+          <h4>Seamless Handover</h4>
+          <p>Already tenanted? We manage the changeover with your current agent at no cost, tenant staying in place.</p>
+          <a href="#contact" class="more">More</a>
+        </div>
+      </div>
+      <div class="p">
+        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div>
+          <h4>Ongoing Management</h4>
+          <p>Rent, inspections, maintenance and clear monthly statements, with Valerie across all of it.</p>
+          <a href="#contact" class="more">More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- trust strip -->
+<div class="trust">
+  <div class="wrap">
+    <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>35 Years</b><span>Local experience</span></div></div>
+    <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"/></svg><div><b>Family Owned</b><span>Team of three</span></div></div>
+    <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg><div><b>One Focus</b><span>Rentals only</span></div></div>
+    <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><b>RLA Licensed</b><span>South Australia</span></div></div>
+    <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div><b>$0 To Switch</b><span>Tenant in place</span></div></div>
+  </div>
+</div>
+
+<!-- dark CTA band -->
+<section class="band">
+  <div class="wrap">
+    <h2>We Manage It Like It's Our Own</h2>
+    <p>Book an initial consult and appraisal with Valerie. No pressure, no obligation, and you'll always be talking to her.</p>
+    <a href="#contact" class="btn btn-accent">Request an Appraisal</a>
+  </div>
+</section>
+
+<!-- footer -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="social">
+      <a href="https://www.facebook.com/domainrentalmanagement/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="tel:0438188478" aria-label="Phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <a href="mailto:valerie@domainrentalmanagement.com.au" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+    </div>
+    <div class="cmark">Domain Rental Management</div>
+    <div class="copy">&copy; 2026 <b>Domain Rental Management</b> · RLA [your licence #] · Hove, South Australia</div>
+    <div class="em">Email: <a href="mailto:valerie@domainrentalmanagement.com.au">valerie@domainrentalmanagement.com.au</a> &nbsp;·&nbsp; Phone: <a href="tel:0438188478">0438 188 478</a></div>
+  </div>
 </footer>
 
 <script>
-(function(){
-  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in'));return;}
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.08});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-})();
-(function(){
-  const h=document.getElementById('siteHeader'),c=document.querySelector('.cover');
-  function s(){const t=(c?c.offsetHeight:600)-90;h.classList.toggle('scrolled',window.scrollY>t);}
-  s();addEventListener('scroll',s,{passive:true});addEventListener('resize',s);
-})();
 document.querySelector('.burger').addEventListener('click',function(){
-  const h=document.getElementById('siteHeader'),m=document.querySelector('.menu'),open=m.style.display==='flex';
+  const m=document.querySelector('.menu');const open=m.style.display==='flex';
   m.style.display=open?'':'flex';
-  if(!open){h.classList.add('scrolled');Object.assign(m.style,{position:'absolute',top:'88px',left:'0',right:'0',flexDirection:'column',alignItems:'flex-start',background:'var(--paper)',padding:'20px 24px',borderBottom:'1px solid var(--line)',gap:'12px',marginRight:'0'});}
+  if(!open){Object.assign(m.style,{position:'absolute',left:'0',right:'0',top:'100%',flexDirection:'column',alignItems:'stretch',background:'var(--navy-dk)',padding:'8px 0',zIndex:'20'});}
 });
-function sendEnquiry(e){
-  e.preventDefault();const f=e.target,v=id=>(f.querySelector('#'+id)||{}).value||'';
-  const body=`Name: ${v('n')}\r\nEmail: ${v('e')}\r\nPhone: ${v('p')}\r\nProperty: ${v('a')}\r\n\r\n${v('m')}`;
-  location.href='mailto:valerie@domainrentalmanagement.com.au?subject='+encodeURIComponent('Rental appraisal request')+'&body='+encodeURIComponent(body);
-  return false;
-}
 </script>
 </body>
 </html>
