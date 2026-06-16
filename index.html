@@ -52,7 +52,7 @@ p{margin:0}a{color:inherit;text-decoration:none}img{display:block;max-width:100%
 .topbar a{color:#c4d0de}.topbar a:hover{color:#fff}
 
 /* ===== header over hero ===== */
-.hero{position:relative;background:var(--navy-dk);background-image:linear-gradient(rgba(20,32,52,.62),rgba(20,32,52,.62)),var(--hero-img,none);background-size:cover;background-position:center 42%}
+.hero{position:relative;background:var(--navy-dk);background-image:linear-gradient(rgba(18,29,48,.52),rgba(18,29,48,.72)),var(--hero-img,none);background-size:cover;background-position:center 42%}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.12)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
 .brand{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
@@ -68,8 +68,9 @@ p{margin:0}a{color:inherit;text-decoration:none}img{display:block;max-width:100%
 
 /* hero inner */
 .hero-inner{text-align:center;padding:54px 0 0}
-.hero-inner h1{color:#fff;font-size:46px;font-weight:300;letter-spacing:.02em}
-.hero-inner p{color:rgba(255,255,255,.9);font-size:15px;letter-spacing:.14em;text-transform:uppercase;font-weight:300;margin:14px auto 0;max-width:680px}
+.hero-inner h1{color:#fff;font-size:62px;font-weight:600;letter-spacing:.03em;text-shadow:0 2px 34px rgba(8,15,26,.55)}
+.hero-inner h1::after{content:"";display:block;width:64px;height:3px;background:var(--peri);margin:20px auto 0}
+.hero-inner p{color:#fff;font-size:17px;line-height:1.65;letter-spacing:.15em;text-transform:uppercase;font-weight:400;margin:22px auto 0;max-width:720px;text-shadow:0 1px 16px rgba(8,15,26,.5)}
 .hero-inner .btn{margin-top:26px}
 .boxes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:48px 0 -60px}
 .box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.28);padding:34px 20px 30px;text-align:center;transition:.25s}
@@ -138,7 +139,7 @@ footer .em a{color:#fff}footer .em a:hover{color:var(--peri)}
   .menu{display:none}.burger{display:block}
   .boxes,.feat,.rev-grid,.proc{grid-template-columns:1fr;gap:18px}
   .boxes{margin-bottom:-40px}
-  .hero-inner h1{font-size:34px}
+  .hero-inner h1{font-size:40px}
   .trust .wrap{justify-content:center;gap:26px}
   .feat .f p{min-height:0}
 }
