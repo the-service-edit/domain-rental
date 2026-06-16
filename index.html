@@ -68,7 +68,8 @@ p{margin:0}a{color:inherit;text-decoration:none}img{display:block;max-width:100%
 
 /* hero inner */
 .hero-inner{text-align:center;padding:54px 0 0}
-.hero-inner h1{color:#fff;font-size:62px;font-weight:600;letter-spacing:.03em;text-shadow:0 2px 34px rgba(8,15,26,.55)}
+.hero-eyebrow{display:block;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c2d4ee;margin-bottom:18px}
+.hero-inner h1{color:#fff;font-size:54px;font-weight:600;line-height:1.1;letter-spacing:.01em;max-width:760px;margin:0 auto;text-shadow:0 2px 34px rgba(8,15,26,.55)}
 .hero-inner h1::after{content:"";display:block;width:64px;height:3px;background:var(--peri);margin:20px auto 0}
 .hero-inner p{color:#fff;font-size:18.5px;line-height:1.65;letter-spacing:.15em;text-transform:uppercase;font-weight:400;margin:22px auto 0;max-width:720px;text-shadow:0 1px 16px rgba(8,15,26,.5)}
 .hero-inner .btn{margin-top:26px}
@@ -121,7 +122,15 @@ p{margin:0}a{color:inherit;text-decoration:none}img{display:block;max-width:100%
 .band{position:relative;background:var(--navy);background-image:linear-gradient(rgba(28,47,74,.86),rgba(28,47,74,.86)),var(--hero-img,none);background-size:cover;background-position:center 60%;text-align:center;padding:64px 0}
 .band h2{color:#fff;font-size:35px;font-weight:300;letter-spacing:.05em;text-transform:uppercase}
 .band p{color:rgba(255,255,255,.85);font-size:15px;letter-spacing:.1em;text-transform:uppercase;margin:12px auto 0;max-width:680px}
-.band .btn{margin-top:24px}
+.band-eyebrow{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--peri);margin-bottom:16px}
+.band h2{max-width:680px;margin:0 auto}
+.band p{max-width:560px}
+.band-actions{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:34px}
+.btn-cta{background:#fff;color:var(--navy);font-size:15px;padding:19px 44px;box-shadow:0 16px 34px rgba(0,0,0,.30);transition:transform .25s,background .25s,color .25s}
+.btn-cta:hover{background:var(--peri);color:var(--navy-dk);transform:translateY(-2px)}
+.band-call{color:#fff;font-size:15.5px;font-weight:600;letter-spacing:.03em;border-bottom:1.5px solid var(--peri);padding-bottom:3px;transition:color .2s}
+.band-call:hover{color:var(--peri)}
+.band-trust{margin-top:28px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 
 /* ===== footer ===== */
 footer{background:var(--navy-dk);color:#9fb0c2;text-align:center;padding:46px 0 40px}
@@ -178,6 +187,7 @@ footer .em a{color:#fff}footer .em a:hover{color:var(--peri)}
 .rev::before{display:none}
 .rev p{font-size:18.5px;line-height:1.6;color:var(--head);font-weight:300}
 .rev .who{margin-top:22px}
+.rev-tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--peri-dk);margin-bottom:14px}
 
 /* Appraisal form */
 .appraisal-sec{background:var(--bg2)}
@@ -226,14 +236,15 @@ footer .em a{color:#fff}footer .em a:hover{color:var(--peri)}
         <a href="#services">Services</a>
         <a href="#switch">Why Switch</a>
         <a href="#reviews">Reviews</a>
-        <a href="#contact">Contacts</a>
+        <a href="#contact">Contact</a>
       </nav>
       <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="wrap hero-inner">
-    <h1>Welcome</h1>
-    <p>We manage your Adelaide rental, and nothing else. One focus, one point of contact, 35 years.</p>
+    <span class="hero-eyebrow">Boutique property management for Adelaide landlords</span>
+    <h1>Your Adelaide rental, managed by one experienced specialist.</h1>
+    <p>Direct access to Valerie Dellow, 35+ years of hands-on local experience, and no sales distractions.</p>
     <a href="#contact" class="btn btn-outline">Book Your Free Rental Appraisal</a>
     <div class="boxes">
       <div class="box">
@@ -328,18 +339,22 @@ footer .em a{color:#fff}footer .em a:hover{color:var(--peri)}
     <div class="sec-sub">Relationships that last, often a decade or more</div>
     <div class="rev-grid">
       <div class="rev">
+        <div class="rev-tag">Landlord Review</div>
         <p>We've worked with Domain for over ten years. Thorough, excellent communicators, and zero trouble. I highly recommend them.</p>
         <div class="who">Jeff Strachan<span>Landlord, 10+ year client</span></div>
       </div>
       <div class="rev">
+        <div class="rev-tag">Landlord Review</div>
         <p>A safe and trustworthy pair of hands. Valerie and Tanya know their stuff and look after the property as if it were their own.</p>
         <div class="who">Rowan &amp; Ruth<span>Landlords, Seaway Road</span></div>
       </div>
       <div class="rev">
+        <div class="rev-tag">Tenant Review</div>
         <p>She gave her time generously on the viewing and answered everything on the spot. The presentation was exceptional.</p>
         <div class="who">Rox &amp; the boys<span>Tenants, Aberfoyle Park</span></div>
       </div>
     </div>
+    <div style="text-align:center;margin-top:40px"><a class="more" href="https://domainrentalmanagement.com.au/client-feeback/" target="_blank" rel="noopener">Read more reviews</a></div>
   </div>
 </section>
 
@@ -394,9 +409,14 @@ footer .em a{color:#fff}footer .em a:hover{color:var(--peri)}
 <!-- dark CTA band -->
 <section class="band">
   <div class="wrap">
-    <h2>We Manage It Like It's Our Own</h2>
-    <p>Book an initial consult and appraisal with Valerie. No pressure, no obligation, and you'll always be talking to her.</p>
-    <a href="#contact" class="btn btn-accent">Book Your Free Rental Appraisal</a>
+    <div class="band-eyebrow">Free rental appraisal</div>
+    <h2>Find Out What Your Property Could Rent For</h2>
+    <p>Speak directly with Valerie. She'll personally review your property and be in touch, with an honest figure backed by 35 years of local experience.</p>
+    <div class="band-actions">
+      <a href="#contact" class="btn btn-cta">Book Your Free Appraisal</a>
+      <a href="tel:0438188478" class="band-call">or call Valerie &middot; 0438 188 478</a>
+    </div>
+    <div class="band-trust">Family owned &middot; Boutique by design &middot; You deal directly with the principal</div>
   </div>
 </section>
 
@@ -405,7 +425,7 @@ footer .em a{color:#fff}footer .em a:hover{color:var(--peri)}
   <div class="wrap">
     <h2 class="sec-title">Book Your Free Rental Appraisal</h2>
     <div class="sec-sub">Discover what your property could rent for</div>
-    <p class="sec-lead">Share a few details and Valerie will personally be in touch to arrange a time. No pressure, no obligation.</p>
+    <p class="sec-lead">Share a few details and Valerie will personally review your property and be in touch.</p>
     <form class="appraisal" onsubmit="return sendEnquiry(event)">
       <div class="row">
         <div class="fld"><label for="fn">Your name</label><input id="fn" type="text" required></div>
@@ -429,7 +449,7 @@ footer .em a{color:#fff}footer .em a:hover{color:var(--peri)}
       <a href="mailto:valerie@domainrentalmanagement.com.au" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
     </div>
     <div class="cmark">Domain Rental Management</div>
-    <div class="copy">&copy; 2026 <b>Domain Rental Management</b> · RLA [your licence #] · Hove, South Australia</div>
+    <div class="copy"><b>Domain Rental Management</b> · RLA [add licence number] · Hove, South Australia</div>
     <div class="em">Email: <a href="mailto:valerie@domainrentalmanagement.com.au">valerie@domainrentalmanagement.com.au</a> &nbsp;·&nbsp; Phone: <a href="tel:0438188478">0438 188 478</a></div>
   </div>
 </footer>
